@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                <a href="">LOGO</a>
+            </div>
+            <div class="middle">
+                <ul>
+                    <li><a href="">LIVING ROOM</a></li>
+                    <li><a href="">WOOD</a></li>
+                    <li><a href="">BEDROOM</a></li>
+                    <li><a href="">DONATION</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <p><span>Call:</span>   +250780545732</p>
+            </div>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="backimage">
+          <i id="prev" class="fa-solid fa-arrow-left"></i>
+          <img src="./image/home1.jpg" alt="" id="slide" class="slide">
+          <i id="next" class="fa-solid fa-arrow-right"></i>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+      <div class="about">
+        <p>Solid wood for every room in the house </p>
+        <div class="container">
+        <div class="top">
+            <div class="image">
+                <img src="./image/wood1.jpeg" alt="">
+            </div>
+            <div class="image">
+               <img src="./image/wood2.jpeg" alt=""> 
+            </div>            
+            
+        </div>
+        <div class="middle">
+            <div class="image">
+                <img src="./image/wood5.jpeg" alt="">
+                <!-- <div>Lorem ipsum dolor sit amet consectetur.</div> -->
+            </div>
+            <div class="image">
+              <img src="./image/wood6.jpeg" alt="">  
+            </div>
+            
+            
+        </div>
+        <div class="bottom">
+            <div class="image">
+                <img src="./image/wood3.jpeg" alt="">
+            </div>
+            <div class="image">
+              <img src="./image//wood4.jpeg" alt="">  
+            </div>
+            
+            
+        </div>
+      </div>
+    </div>
+    </section>
+      
+      
+      
+      <script>
+        // Set the slideshow interval
+        const interval = 3000; // 5 seconds
+      
+        // Get the slide and arrow elements
+        const slide = document.getElementById('slide');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+      
+        // Set the image array
+        const images = [
+          './image/home1.jpg',
+          './image/home2.jpg',
+          './image/home3.jpg',
+          // Add more images here
+        ];
+      
+        // Set the current image index
+        let currentIndex = 0;
+      
+        // Function to change the slide
+        function changeSlide(index) {
+          slide.classList.add('out');
+          setTimeout(() => {
+            slide.src = images[index];
+            slide.classList.remove('out');
+            slide.classList.add('in');
+            setTimeout(() => {
+              slide.classList.remove('in');
+            }, 500);
+          }, 500);
+          currentIndex = index;
+        }
+      
+        // Automatic slideshow
+        setInterval(() => {
+          changeSlide((currentIndex + 1) % images.length);
+        }, interval);
+      
+        // Arrow navigation
+        prev.addEventListener('click', () => {
+          changeSlide((currentIndex - 1 + images.length) % images.length);
+        });
+      
+        next.addEventListener('click', () => {
+          changeSlide((currentIndex + 1) % images.length);
+        });
+      </script>
+
+</body>
+</html>
