@@ -401,7 +401,8 @@ header nav .right p span{
   .footer {
     padding: 15px 20px;
     position: absolute;
-    right: -50px;
+    right: -70px;
+
   }
   .footer .container {
     width: 78vh;
