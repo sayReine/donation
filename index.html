@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,11 +35,13 @@
                 </ul>
             </div>
             <div class="right">
-                <p><span>Call:</span>   +250780545732</p>
+                <p><span><i class="fa-solid fa-phone"></i></span>   +250780545732</p>
             </div>
         </nav>
     </header>
     <section class="home" id="home">
+      
+</div>
         <div class="backimage">
           <i id="prev" class="fa-solid fa-arrow-left"></i>
           <img src="./image/home1.jpg" alt="" id="slide" class="slide">
@@ -73,16 +79,91 @@
             </div>
             <div class="image">
               <img src="./image//wood4.jpeg" alt="">  
-            </div>
-            
-            
+            </div>            
         </div>
       </div>
     </div>
     </section>
       
-      
-      
+    <section class="bedroom" id="bedroom">
+      <p>We have beautiful Bed wood for your bedroom </p>
+      <div class="container">
+        <div class="left">
+          <div class="image">
+            
+            <img src="./image/bed1.jpg" alt="">
+            <span>On sale</span>
+          </div>
+          <div class="image">
+            <img src="./image/bed2.jpg" alt="">
+            <span>On sale</span>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="image">
+            <img src="./image/bed3.jpg" alt="">
+            <span>On sale</span>
+          </div>
+          <div class="image">
+            <img src="./image/bed4.jpg" alt="">
+            <span>On sale</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="image">
+          <img src="./image/bed5.jpg" alt="">
+          <span>On sale</span>
+        </div><br>
+        <div class="image">
+          <img style="position: relative; top: -20px;" src="./image/bed6.jpg" alt="">
+          <span style="position: absolute; top: -5px;">On sale</span>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <!-- index.html -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p class="word" style="margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        <ul class="list-unstyled social-links">
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Get in Touch</h5>
+        <p style="line-height: 2;"><i class="fas fa-map-marker-alt"></i>  kk 595 st, Kigali, Rwanda </p>
+        <p style="line-height: 2;"><i class="fas fa-phone"></i> (123) 0780-545-732</p>
+        <p style="line-height: 2;"><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+        <button id="dark-mode-toggle"> Change Mode</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center copyright">Copyright &copy; 2024 . All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
       <script>
         // Set the slideshow interval
         const interval = 3000; // 5 seconds
@@ -130,6 +211,20 @@
         next.addEventListener('click', () => {
           changeSlide((currentIndex + 1) % images.length);
         });
+        // Get the button and footer elements
+const toggleButton = document.getElementById('dark-mode-toggle');
+const footer = document.querySelector('.footer');
+
+// Add an event listener to the button
+toggleButton.addEventListener('click', () => {
+  // Toggle the dark mode class on the body element
+  document.body.classList.toggle('dark-mode');
+  header.classList.toggle('dark-mode');
+
+  // Toggle the dark mode class on the footer element
+  footer.classList.toggle('dark-mode');
+});
+        
       </script>
 
 </body>
