@@ -408,6 +408,14 @@ header nav .right p span{
     width: 78vh;
   }
 
+  .footer .container .nav{
+    display: none;
+  }
+
+  .footer .container .row {
+    justify-content: space-around;
+  }
+
   .footer .container .word{
     display: none;
   }
